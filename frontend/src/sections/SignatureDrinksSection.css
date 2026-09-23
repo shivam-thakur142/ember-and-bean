@@ -1,0 +1,103 @@
+.signature-drinks-section {
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.signature-drink-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.signature-drink-item:last-child {
+  margin-bottom: 0;
+}
+
+.signature-drink-item.reverse {
+  direction: rtl;
+}
+
+.signature-drink-item.reverse .drink-info-side {
+  direction: ltr;
+}
+
+.drink-visual-side {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+  aspect-ratio: 16 / 11;
+  box-shadow: 0 20px 45px -15px rgba(24, 19, 16, 0.18);
+}
+
+.drink-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.drink-visual-side:hover .drink-img {
+  transform: scale(1.05);
+}
+
+.drink-info-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.drink-eyebrow {
+  color: var(--accent-copper);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.drink-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 2.9rem);
+  color: var(--text-main);
+  line-height: 1.15;
+}
+
+.drink-price {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--accent-copper);
+  font-weight: 600;
+}
+
+.drink-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.drink-tasting-notes {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.tasting-badge {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  font-size: 0.76rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-xs);
+  color: var(--text-main);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 860px) {
+  .signature-drink-item,
+  .signature-drink-item.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    direction: ltr;
+  }
+}

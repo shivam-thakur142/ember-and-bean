@@ -1,0 +1,44 @@
+.featured-menu-section {
+  background-color: var(--bg-secondary);
+  position: relative;
+}
+
+.featured-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.featured-menu-footer {
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Skeleton Loading Card */
+.menu-skeleton-card {
+  height: 420px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  animation: skeletonPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes skeletonPulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}
+
+@media (max-width: 1024px) {
+  .featured-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-menu-grid {
+    grid-template-columns: 1fr;
+  }
+}

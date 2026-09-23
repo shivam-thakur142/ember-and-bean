@@ -1,0 +1,142 @@
+.contact-page {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  padding-top: clamp(6.5rem, 10vw, 8.5rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6.5rem);
+  align-items: flex-start;
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  line-height: 1.05;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-detail-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.contact-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-xs);
+  background-color: var(--bg-secondary);
+  color: var(--accent-copper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.detail-card-title {
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-copper);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.detail-card-val {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+/* Form & Map Right Column */
+.contact-interactive-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Map Placeholder */
+.map-canvas-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--bg-dark);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-medium);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-svg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+}
+
+.map-overlay-badge {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(20, 15, 12, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-dark-medium);
+  padding: 1.25rem 1.8rem;
+  border-radius: var(--radius-xs);
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.map-pin-indicator {
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-copper);
+  border-radius: 50%;
+  margin: 0 auto 0.75rem;
+  box-shadow: 0 0 0 6px rgba(200, 138, 88, 0.25);
+  animation: mapPulse 2s infinite;
+}
+
+@keyframes mapPulse {
+  0% { box-shadow: 0 0 0 0 rgba(200, 138, 88, 0.5); }
+  70% { box-shadow: 0 0 0 14px rgba(200, 138, 88, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(200, 138, 88, 0); }
+}
+
+.contact-form-box {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: clamp(2rem, 3.5vw, 2.75rem);
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

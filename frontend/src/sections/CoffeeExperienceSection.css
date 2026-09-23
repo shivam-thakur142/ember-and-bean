@@ -1,0 +1,59 @@
+.coffee-exp-section {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  position: relative;
+}
+
+.coffee-exp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.exp-pillar-card {
+  border-top: 1px solid var(--border-dark-medium);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.exp-pillar-card:hover {
+  border-top-color: var(--accent-gold);
+  transform: translateY(-4px);
+}
+
+.pillar-number {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.pillar-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: var(--text-light);
+  margin-bottom: 0.85rem;
+  line-height: 1.25;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: var(--text-light-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .coffee-exp-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .coffee-exp-grid {
+    grid-template-columns: 1fr;
+  }
+}

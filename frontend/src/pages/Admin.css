@@ -1,0 +1,200 @@
+.admin-page {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  padding-top: clamp(6.5rem, 10vw, 8.5rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.admin-title {
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+/* KPI Stats Grid */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-kpi-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(24, 19, 16, 0.04);
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.stat-val {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: var(--accent-copper);
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Navigation Tabs */
+.admin-tabs-bar {
+  display: flex;
+  gap: 0.8rem;
+  border-bottom: 1px solid var(--border-medium);
+  margin-bottom: 2rem;
+  padding-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.admin-tab-btn {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.admin-tab-btn:hover {
+  color: var(--text-main);
+}
+
+.admin-tab-btn.active {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* Tables & Lists */
+.admin-table-container {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  overflow-x: auto;
+  box-shadow: 0 6px 20px rgba(24, 19, 16, 0.04);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.admin-table th {
+  background-color: var(--bg-secondary);
+  padding: 1rem 1.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-medium);
+}
+
+.admin-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-muted);
+  vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+  background-color: var(--bg-primary);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.status-badge.confirmed {
+  background-color: #DEF7EC;
+  color: #03543F;
+}
+
+.status-badge.pending {
+  background-color: #FEF08A;
+  color: #854D0E;
+}
+
+.status-badge.cancelled {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+/* Action Buttons inside Table */
+.table-btn {
+  font-size: 0.76rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-medium);
+  background-color: var(--bg-white);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.table-btn:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-copper);
+}
+
+.table-btn.delete {
+  color: #DC2626;
+  border-color: #FECACA;
+}
+.table-btn.delete:hover {
+  background-color: #FEE2E2;
+}
+
+/* Admin Login Card */
+.admin-login-wrapper {
+  max-width: 440px;
+  margin: 3rem auto;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: 2.5rem;
+  box-shadow: 0 20px 45px -15px rgba(24, 19, 16, 0.1);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

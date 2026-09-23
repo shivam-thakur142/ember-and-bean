@@ -1,0 +1,54 @@
+.reservation-cta-section {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border-dark-subtle);
+}
+
+.reservation-cta-wrap {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cta-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  line-height: 1.05;
+  color: var(--text-light);
+  letter-spacing: -0.02em;
+}
+
+.cta-desc {
+  font-size: 1.08rem;
+  color: var(--text-light-muted);
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reservation-cta-bg-art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(200, 138, 88, 0.1) 0%, rgba(20, 15, 12, 0) 70%);
+  pointer-events: none;
+  filter: blur(50px);
+}
